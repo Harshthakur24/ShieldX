@@ -1,73 +1,122 @@
-# React + TypeScript + Vite
+# Shield - Backend as a Service Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, Supabase-inspired dashboard UI for managing backend services. Shield provides a beautiful and intuitive interface for outsourcing backend functionality.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 **Modern UI Design** - Clean, dark-themed interface inspired by Supabase
+- 📊 **Dashboard Overview** - Comprehensive overview of projects and resources
+- 🗄️ **Database Management** - View and manage database tables
+- 🔐 **Authentication** - Configure authentication providers
+- 💾 **Storage** - Manage file storage buckets
+- ⚡ **Edge Functions** - Deploy and monitor serverless functions
+- ⚙️ **Settings** - Comprehensive settings management
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** - Modern React with latest features
+- **TypeScript** - Type-safe development
+- **React Router** - Client-side routing
+- **Vite** - Fast build tool and dev server
+- **Lucide React** - Beautiful icon library
+- **CSS3** - Custom styling with CSS variables
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+The application will be available at `http://localhost:5173`
+
+### Build
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
+src/
+├── components/
+│   └── Layout/
+│       ├── Sidebar.tsx       # Navigation sidebar
+│       ├── Header.tsx        # Top header bar
+│       └── Layout.tsx        # Main layout wrapper
+├── pages/
+│   ├── Overview.tsx         # Dashboard overview
+│   ├── Projects.tsx         # Projects management
+│   ├── Database.tsx         # Database tables
+│   ├── Auth.tsx             # Authentication
+│   ├── Storage.tsx          # File storage
+│   ├── Functions.tsx        # Edge functions
+│   └── Settings.tsx         # Settings
+├── App.tsx                  # Main app component with routing
+└── main.tsx                 # Entry point
+```
+
+## Design System
+
+The UI uses a consistent design system with CSS variables:
+
+- **Colors**: Dark theme with accent colors
+- **Typography**: System fonts for optimal performance
+- **Spacing**: Consistent padding and margins
+- **Components**: Reusable card-based components
+
+## Features Overview
+
+### Overview Page
+- Statistics cards showing key metrics
+- Recent activity feed
+- Quick action buttons
+
+### Projects Page
+- Grid view of all projects
+- Project status indicators
+- Resource usage information
+
+### Database Page
+- Table management interface
+- Search and filter functionality
+- Schema viewing capabilities
+
+### Authentication Page
+- Provider configuration
+- User statistics
+- Toggle authentication methods
+
+### Storage Page
+- Bucket management
+- Storage usage visualization
+- File organization
+
+### Edge Functions Page
+- Function deployment interface
+- Invocation metrics
+- Performance monitoring
+
+### Settings Page
+- Profile management
+- Notification preferences
+- Security settings
+- Billing information
+
+## License
+
+MIT
