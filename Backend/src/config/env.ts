@@ -9,6 +9,7 @@ interface EnvConfig {
   CORS_ORIGIN: string;
   DATABASE_URL?: string;
   JWT_SECRET?: string;
+  JWT_TTL?: string;
   API_KEY?: string;
 }
 
@@ -19,6 +20,7 @@ export const env: EnvConfig = {
   CORS_ORIGIN: process.env.CORS_ORIGIN || 'http://localhost:5173',
   DATABASE_URL: process.env.DATABASE_URL,
   JWT_SECRET: process.env.JWT_SECRET,
+  JWT_TTL: process.env.JWT_TTL || '3600', // Default to 1 hour (in seconds)
   API_KEY: process.env.API_KEY,
 };
 
